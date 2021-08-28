@@ -1,0 +1,97 @@
+{
+  "info": {
+    "_postman_id": "2197d0a7-a190-4c69-b498-80e46453a378",
+    "name": "OpenWeatherMapAPI Copy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "OpenWeatherMap_PostRequest",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "in",
+              "value": "query",
+              "type": "string"
+            },
+            {
+              "key": "value",
+              "value": "c17f86683d2ecfa5e91115142909dead",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "appid",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"external_id\": \"DEMO_TEST001\",\n  \"name\": \"Team Demo Test Station 001\",\n  \"latitude\": 33.33,\n  \"longitude\": -122.43,\n  \"altitude\": 222\n}  "
+        },
+        "url": {
+          "raw": "http://api.openweathermap.org/data/3.0/stations",
+          "protocol": "http",
+          "host": [
+            "api",
+            "openweathermap",
+            "org"
+          ],
+          "path": [
+            "data",
+            "3.0",
+            "stations"
+          ],
+          "query": [
+            {
+              "key": "external_id",
+              "value": "SF_UPD001",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "OpenWeatherMap_GetRequest",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://api.openweathermap.org/data/3.0/stations/6124179b09e7430001b9fb50?appid=c17f86683d2ecfa5e91115142909dead",
+          "protocol": "http",
+          "host": [
+            "api",
+            "openweathermap",
+            "org"
+          ],
+          "path": [
+            "data",
+            "3.0",
+            "stations",
+            "6124179b09e7430001b9fb50"
+          ],
+          "query": [
+            {
+              "key": "appid",
+              "value": "c17f86683d2ecfa5e91115142909dead"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
